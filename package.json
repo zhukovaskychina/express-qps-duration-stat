@@ -1,0 +1,22 @@
+{
+  "name": "express-qps-duration-stat",
+  "version": "1.0.0",
+  "engines": {
+    "node": ">=0.12"
+  },
+  "license": "MIT",
+  "author": {
+    "name": "zhukovasky",
+    "email": "zhukovasky@163.com"
+  },
+  "main": "express-qps-duration-stat.js",
+  "repository":{
+    "type": "git",
+    "url":"https://github.com/zhukovaskychina/express-qps-duration-stat"
+  },
+  "url":"https://github.com/zhukovaskychina/express-qps-duration-stat",
+  "homepage": "https://github.com/zhukovaskychina/express-qps-duration-stat",
+  "dependencies": {
+    "rwebsocket":"1.1.0"
+  }
+}
