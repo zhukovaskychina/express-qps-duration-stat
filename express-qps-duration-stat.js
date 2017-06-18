@@ -4,7 +4,7 @@
 var RWebSocket = require('rwebsocket');
 
 
-exports.QPSStat=function (app,option) {
+exports.QPSStat=function (app,options) {
     var config={
         ws:options.ws||'ws://localhost:9000/',
         interval:options.interval||600000
