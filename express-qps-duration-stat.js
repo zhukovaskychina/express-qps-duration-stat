@@ -7,7 +7,8 @@ var RWebSocket = require('rwebsocket');
 exports.QPSStat=function (app,options) {
     var config={
         ws:options.ws||'ws://localhost:9000/',
-        interval:options.interval||600000
+        interval:options.interval||600000,
+        timeout:options.timeout||20000
     };
     var client = new RWebSocket(config.ws, null, config.interval);
 
@@ -17,7 +18,7 @@ exports.QPSStat=function (app,options) {
             res.on('finish',function() {
                 var duration=((new Date())-t);
                 //默认超过20秒向服务器发送请求
-                if(duration>2000){
+                if(duration>config.timeout){
                     if(readyState===1){
                         var jsons=JSON.stringify({
                             "dataType":"SLOWREQ",
